@@ -1,3 +1,83 @@
 .squada{
     font-family: 'Squada One', cursive;
 }
+.paytone{
+    font-family: 'Paytone One', sans-serif;
+}
+
+.btn-white{
+    background-color: white;
+    border:1px solid black;
+    &:hover{
+        background-color: #E6553B;
+        color: white; 
+    }
+}
+
+.btn-border{
+    &:hover{
+        background-color: #E6553B;
+        color: white;
+        border: 1px solid black;
+    }
+}
+
+.btn-xl{
+    padding: 8px 48px;
+}
+
+.btn-triangle{
+    position: relative;
+    &::after{
+        content:"";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-left: 16px transparent solid;
+        border-bottom: 16px #E6553B solid;
+    }
+    &:hover{
+        &::after{
+            border-bottom: 16px #000 solid;
+        }
+    }
+}
+
+.writing-lr{
+    writing-mode: vertical-lr;
+}
+
+.vertical-middle{
+    vertical-align: middle;
+}
+
+.object{
+    object-fit: cover;
+}
+
+.object-pos{
+    object-position: center;
+}
+
+.object-pos-top{
+    object-position: top;
+}
+
+
+.mb--1{
+    margin-bottom: -1px;
+}
+
+.mb--2{
+    margin-bottom: -8px;
+}
+
+.mr--1{
+    margin-right: -1px;
+}
+
+.mr-md-1{
+    @include md{
+        margin-right: -1px;
+    }
+}
