@@ -1,0 +1,20 @@
+.intro{
+    .h-sm-395{
+        @include sm{
+            height: 395px;
+        }
+    }
+    .h-lg-546{
+        @include lg{
+          height: 546px;
+        }
+      }
+}
+
+.other{
+    .h-lg-327{
+        include lg{
+            height: 327px;
+        }
+    }
+}

@@ -40,10 +40,26 @@
     }
   }
 }
-.artists{
-  .swiper {
-    width: 100%;
-    height: auto;
-  }
 
+.artworks{
+  .h-lg-169{
+    @include lg{
+      height: 169px;
+    }
+  }
+  .h-lg-254{
+    @include lg{
+      height: 254px;
+    }
+  }
+  .h-lg-327{
+    @include lg{
+      height: 327px;
+    }
+  }
+  .h-lg-395{
+    @include lg{
+      height: 395px;
+    }
+  }
 }

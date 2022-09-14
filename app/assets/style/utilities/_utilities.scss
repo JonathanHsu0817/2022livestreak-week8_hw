@@ -77,7 +77,7 @@
 }
 
 .mr-md-1{
-    @include md{
+    @include media-breakpoint-up(md){
         margin-right: -1px;
     }
 }
