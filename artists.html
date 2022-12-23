@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>藝術作品</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Sans:wght@400;700&family=Paytone+One&family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light p-0">
+      <div class="container-lg d-flex">
+        <h1 class="flex-grow-1 border-end border-night py-3 py-lg-8 fs-6 m-0"><a class="navbar-brand " href="./index.html">
+          <img src="./assets/images/logo.svg" alt="logo"></a></h1>
+        <form class="d-flex align-items-center py-lg-6 px-xl-9">
+          <input class="form-control bg-light border-0 d-none d-lg-block" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+          <a href="#" class="p-4"><i class="fa-solid fa-magnifying-glass fa-xl icon-primary "></i></a>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fa-lg"></i>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+          <ul class="navbar-nav fw-bold mb-2 mb-lg-0">
+            <li class="nav-item border-bottom border-night">
+              <a class="nav-link px-lg-9 py-6 py-lg-10  text-center active" aria-current="page" href="./explore.html">探索</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-9 py-6 py-lg-10 text-center active" aria-current="page" href="./price.html">市值</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalNavbar"><i class="fa-solid fa-wallet nav-link fs-3 text-black pe-0 py-lg-10 ps-lg-10 d-none d-lg-inline-block"></i></a>
+
+              <a href="#" class="btn border-night text-white fs-5 fs-lg-6 bg-primary rounded-0 w-100 py-3 d-lg-none" data-bs-toggle="modal" data-bs-target="#modalNavbar">連結錢包</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade" id="modalNavbar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-md-down">
+        <div class="modal-content">
+          <div class="modal-header border-night">
+            <div class="position-relative w-100">
+              <h5 class="modal-title text-center fs-4" id="modalNavbarHeading">連結你的錢包</h5>
+              <div class="position-absolute top-50 end-0 translate-middle-y">
+                <button type="button" class="btn-close d-block" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body px-3 pb-0 px-md-3">
+            <div class="container-fluid">
+              <ul class="modal-list row list-unstyled mb-0">
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect01.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">MetaMask</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect02.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">Coinbase Wallet</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect03.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">WalletConnect</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect04.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">Phantom</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 mb-md-0 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect05.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">Glow</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 mb-md-0 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect06.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">Fortmatic</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer p-0 p-md-6 border-0">
+            <button type="button" class="btn btn-primary fs-5 text-white border-night w-100 w-md-auto py-3 py-md-2 px-md-12 mx-auto m-0">連結錢包</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<!-- information -->
+<section class="information bg-light py-10 pb-lg-20">
+  <div class="container text-black">
+    <div class="row">
+      <!-- 圖片 -->
+      <div class="col-lg-9 mb-4 mb-lg-0">
+        <div class="card border-0 mb-lg-0 h-100">
+          <div class="row g-0 h-100">
+            <div class="col-md-5">
+              <img src="./assets/images/artist01.jpg" class="img-fluid h-md-100 object-fix-cover" alt="img_information">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body border border-night -ms-xs-lg-1 px-4 py-6 p-lg-6 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h3 class="card-title squada fs-2 fs-lg-1 mb-0 lh-1">Michael</h3>
+                  <ul class="list-unstyled d-flex align-items-center mb-0">
+
+                    <li class="me-2">
+                      <a href="#" class="text-night hover-color-hover">
+                        <i class="fa-brands fa-discord"></i>
+                      </a>
+                    </li>
+
+                    <li class="me-2">
+                      <a href="#" class="text-night hover-color-hover">
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+
+                    <li class="me-2">
+                      <a href="#" class="text-night hover-color-hover">
+                        <i class="fa-solid fa-globe"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-night hover-color-hover">
+                        <i class="fa-brands fa-twitter"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <p class="mb-6 fs-lg-5">0x3ya666…88ef</p>
+                <p class="card-text font-Noto-Sans-TC">Michael 自小在山林長大，能夠與花草樹木大自然進行靈體溝通，創作題材常見大山、大水、花草與樹木，從日常生活出發，擁有個⼈獨樹⼀格的創作風格，作品觸及靈魂深處、探索未知宇宙，透過與大自然的溝通，探討著存在的本質。​</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 文字內容 -->
+      <div class="col-lg-3">
+        <ul class="list-group lh-1 h-100">
+          <li class="list-group-item d-flex justify-content-between align-items-center flex-grow-1 border-night text-black py-4 px-6">
+            <p class="fw-bold mb-0">販售中</p>
+            <p class="fs-2 squada mb-0">168</p>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between align-items-center flex-grow-1 border-night text-black py-4 px-6">
+            <p class="fw-bold mb-0">地板價格</p>
+            <p class="fs-2 squada mb-0">0.6 <span class="fs-5">ETH</span></p>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between align-items-center flex-grow-1 border-night text-black py-4 px-6">
+            <p class="fw-bold mb-0">7 日成交</p>
+            <p class="fs-2 squada mb-0">8.8 <span class="fs-5">ETH</span></p>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between align-items-center flex-grow-1 border-night text-black py-4 px-6">
+            <p class="fw-bold mb-0">30 日成交</p>
+            <p class="fs-2 squada mb-0">23.1 <span class="fs-5">ETH</span></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Series -->
+<section class="series bg-light">
+  <div class="container">
+    <!-- 標籤切換 -->
+    <ul class="nav nav-tabs mb-6 mb-lg-10" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link p-4 px-lg-12 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#artWorks" type="button" role="tab" aria-controls="home" aria-selected="true">
+          <h2 class="d-inline fs-2 fs-lg-1 lh-1">Art Works<span class="fs-4 fw-bold ms-4 d-none d-lg-inline">系列作品</span></h2>
+        </button>
+      </li>
+
+      <li class="nav-item" role="presentation">
+        <button class="nav-link p-4 px-lg-12 tab-masonry" id="home-tab" data-bs-toggle="tab" data-bs-target="#collection" type="button" role="tab" aria-controls="home" aria-selected="true">
+          <h2 class="d-inline fs-2 fs-lg-1 lh-1">Collection<span class="fs-4 fw-bold ms-4 d-none d-lg-inline">收藏品</span></h2>
+        </button>
+      </li>
+    </ul>
+
+    <!-- 標籤內容 -->
+    <div class="tab-content" id="myTabContent">
+      <!-- 系列作品 -->
+      <div class="tab-pane fade show active pb-10 pb-lg-34" id="artWorks" role="tabpanel" aria-labelledby="home-tab">
+
+        <!-- 花 -->
+        <div class="card card-corner border border-night mb-4 mb-md-4 mb-lg-22">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <div class="card-body text-black px-4 py-8 px-lg-0 pt-lg-12 pb-lg-67-l position-relative">
+                
+                <h3 class="card-title fs-3 fw-bold mb-4">追求者送我的花</h3>
+                <div class="d-flex flex-column flex-lg-row justify-content-between">
+                  <p class="card-text mb-6 mb-lg-0">我又沒有特別喜歡花，為什麼不給我現金就好，擺在那也不知道要幹嘛，只好畫起來看有沒有人要買，阿不然如果真的喜歡我，把這些都買回去八。</p>
+
+                  <!-- 圖片列表 -->
+                  <ul class="list-unstyled d-flex flex-wrap position-lg-absolute mt-lg-24 w-100">
+                    <li class="w-100 w-md-50 w-xl-25 pe-md-1">
+                      <img src="./assets/images/the-new-york-public-library-vBejyCBXZBY-unsplash.jpg" height="313px" class="border border-10 border-night w-100 object-fix-cover h-lg-270" alt="img_series">
+                    </li>
+                    <li class="w-md-50 w-xl-25 ps-md-1 pe-xl-1 d-none d-md-block">
+                      <img src="./assets/images/art29.jpg" height="313px" class="border border-10 border-night w-100 object-fix-cover h-lg-270" alt="img_series">
+                    </li>
+                    <li class="w-md-50 w-xl-25 px-lg-1 d-none d-xl-block">
+                      <img src="./assets/images/art14.jpg" height="313px" class="border border-10 border-night w-100 object-fix-cover h-lg-270" alt="img_series">
+                    </li>
+                    <li class="w-md-50 w-xl-25 ps-lg-1 d-none d-xl-block">
+                      <img src="./assets/images/art30.jpg" height="313px" class="border border-10 border-night w-100 object-fix-cover h-lg-270" alt="img_series">
+                    </li>
+                  </ul>
+                  
+                  <!-- 按鈕 -->
+                  <a href="./filter.html" class="mx-auto mt-auto ms-lg-22">
+                    <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto">MORE</button>
+                  </a>
+                </div>
+              </div>
+              <!-- 卡片裝飾 -->
+              <div class="card-corner-top-start"></div>
+              <div class="card-corner-top-end"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 鳥 -->
+        <div class="card card-corner border border-night ">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <div class="card-body text-black px-4 py-8 px-lg-0 pt-lg-12 pb-lg-67-l position-relative">
+                
+                <h3 class="card-title fs-3 fw-bold mb-4">我家窗前的鳥</h3>
+                <div class="d-flex flex-column flex-lg-row justify-content-between">
+                  <p class="card-text mb-6 mb-lg-0">我又沒有特別喜歡花，為什麼不給我現金就好，擺在那也不知道要幹嘛，只好畫起來看有沒有人要買，阿不然如果真的喜歡我，把這些都買回去八。</p>
+
+                  <!-- 圖片列表 -->
+                  <ul class="list-unstyled d-flex flex-wrap position-lg-absolute mt-lg-24 w-100">
+                    <li class="w-100 w-md-50 w-xl-25 pe-md-1">
+                      <img src="./assets/images/art27.jpg" height="313px" class="border border-10 border-night w-100 object-fix-cover h-lg-270" alt="img_series">
+                    </li>
+                    <li class="w-md-50 w-xl-25 ps-md-1 pe-xl-1 d-none d-md-block">
+                      <img src="./assets/images/art20.jpg" height="313px" class="border border-10 border-night w-100 object-fix-cover h-lg-270" alt="img_series">
+                    </li>
+                    <li class="w-md-50 w-xl-25 px-lg-1 d-none d-xl-block">
+                      <img src="./assets/images/art22.jpg" height="313px" class="border border-10 border-night w-100 object-fix-cover h-lg-270" alt="img_series">
+                    </li>
+                    <li class="w-md-50 w-xl-25 ps-lg-1 d-none d-xl-block">
+                      <img src="./assets/images/art23.jpg" height="313px" class="border border-10 border-night w-100 object-fix-cover h-lg-270" alt="img_series">
+                    </li>
+                  </ul>
+                  
+                  <!-- 按鈕 -->
+                  <a href="./filter.html" class="mx-auto mt-auto ms-lg-22">
+                    <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto">MORE</button>
+                  </a>
+                </div>
+
+              </div>
+              <!-- 卡片裝飾 -->
+              <div class="card-corner-top-start"></div>
+              <div class="card-corner-top-end"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 收藏品 -->
+      <div class="tab-pane fade show mb-10 mb-lg-22" id="collection" role="tabpanel" aria-labelledby="home-tab">
+        
+        <ul class="row row-masonry list-unstyled mb-0 text-black" data-masonry='{"percentPosition": true }'>
+          <li class="col-6 col-lg-3 mb-4 mb-lg-12">
+            <div class="card border-0 bg-transparent">
+              <div class="card-img bg-white p-2 p-xl-6">
+                <div class="img-info">
+                  <a href="./intro.html">
+                    <img src="./assets/images/art09.jpg" class="card-img-top object-fix-cover h-lg-254" height="139px" alt="img_artwork">
+                  </a>
+                  <div class="img-info-background d-none d-lg-block">
+                    <div class="img-info-content">
+                      <div>
+                        <p class="mb-2">看起來多采多姿</p>
+                        <div class="d-flex align-items-center">
+                          <i class="fa-brands fa-ethereum me-2"></i>
+                          <p class="mb-0">300</p>
+                        </div>
+                      </div>
+                      <div class="card-btn align-self-end">
+                        <a href="./intro.html">
+                          <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto fs-5">MORE</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body border-bottom-lg border-lg-night p-2 px-lg-0 py-lg-4">
+                <h3 class="card-text fs-7 fs-lg-6 fw-lg-bold">區塊戀-他的私生活</h3>
+              </div>
+            </div>
+          </li>
+          
+          <li class="col-6 col-lg-3 mb-4 mb-lg-12">
+            <div class="card border-0 bg-transparent">
+              <div class="card-img bg-white p-2 p-xl-6">
+                <div class="img-info">
+                  <a href="./intro.html">
+                    <img src="./assets/images/art10.jpg" class="card-img-top object-fix-cover h-lg-327" height="151px" alt="img_artwork">
+                  </a>
+                  <div class="img-info-background d-none d-lg-block">
+                    <div class="img-info-content">
+                      <div>
+                        <p class="mb-2">你還是不要知道得太多比較好</p>
+                        <div class="d-flex align-items-center">
+                          <i class="fa-brands fa-ethereum me-2"></i>
+                          <p class="mb-0">300</p>
+                        </div>
+                      </div>
+                      <div class="card-btn align-self-end">
+                        <a href="./intro.html">
+                          <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto fs-5">MORE</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body border-bottom-lg border-lg-night p-2 px-lg-0 py-lg-4">
+                <h3 class="card-text fs-7 fs-lg-6 fw-lg-bold">夏娃的醜聞</h3>
+              </div>
+            </div>
+          </li>
+
+          <li class="col-6 col-lg-3 mb-4 mb-lg-12">
+            <div class="card border-0 bg-transparent">
+              <div class="card-img bg-white p-2 p-xl-6">
+                <div class="img-info">
+                  <a href="./intro.html">
+                    <img src="./assets/images/art02.jpg" class="card-img-top object-fix-cover h-lg-254" height="93px" alt="img_artwork">
+                  </a>
+                  <div class="img-info-background d-none d-lg-block">
+                    <div class="img-info-content">
+                      <div>
+                        <p class="mb-2">感覺不是很好喝耶</p>
+                        <div class="d-flex align-items-center">
+                          <i class="fa-brands fa-ethereum me-2"></i>
+                          <p class="mb-0">300</p>
+                        </div>
+                      </div>
+                      <div class="card-btn align-self-end">
+                        <a href="./intro.html">
+                          <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto fs-5">MORE</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body border-bottom-lg border-lg-night p-2 px-lg-0 py-lg-4">
+                <h3 class="card-text fs-7 fs-lg-6 fw-lg-bold">藍色啤酒海</h3>
+              </div>
+            </div>
+          </li>
+
+          <li class="col-6 col-lg-3 mb-4 mb-lg-12">
+            <div class="card border-0 bg-transparent">
+              <div class="card-img bg-white p-2 p-xl-6">
+                <div class="img-info">
+                  <a href="./intro.html">
+                    <img src="./assets/images/art11.jpg" class="card-img-top object-fix-cover h-lg-220" height="173px" alt="img_artwork">
+                  </a>
+                  <div class="img-info-background d-none d-lg-block">
+                    <div class="img-info-content">
+                      <div>
+                        <p class="mb-2">好啦，我愛你啦</p>
+                        <div class="d-flex align-items-center">
+                          <i class="fa-brands fa-ethereum me-2"></i>
+                          <p class="mb-0">300</p>
+                        </div>
+                      </div>
+                      <div class="card-btn align-self-end">
+                        <a href="./intro.html">
+                          <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto fs-5">MORE</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body border-bottom-lg border-lg-night p-2 px-lg-0 py-lg-4">
+                <h3 class="card-text fs-7 fs-lg-6 fw-lg-bold">沒有人愛我</h3>
+              </div>
+            </div>
+          </li>
+
+          <li class="col-6 col-lg-3 mb-4 mb-lg-12">
+            <div class="card border-0 bg-transparent">
+              <div class="card-img bg-white p-2 p-xl-6">
+                <div class="img-info">
+                  <a href="./filter.html">
+                    <img src="./assets/images/art27.jpg" class="card-img-top object-fix-cover h-lg-254" height="185px" alt="img_artwork">
+                  </a>
+                  <div class="img-info-background d-none d-lg-block">
+                    <div class="img-info-content">
+                      <div>
+                        <p class="mb-2">哪裡受傷你要講阿，不然我哪知道？</p>
+                        <div class="d-flex align-items-center">
+                          <i class="fa-brands fa-ethereum me-2"></i>
+                          <p class="mb-0">300</p>
+                        </div>
+                      </div>
+                      <div class="card-btn align-self-end">
+                        <a href="./filter.html">
+                          <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto fs-5">MORE</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body border-bottom-lg border-lg-night p-2 px-lg-0 py-lg-4">
+                <h3 class="card-text fs-7 fs-lg-6 fw-lg-bold">我真的受傷了</h3>
+              </div>
+            </div>
+          </li>
+
+          <li class="col-6 col-lg-3 mb-4 mb-lg-12">
+            <div class="card border-0 bg-transparent">
+              <div class="card-img bg-white p-2 p-xl-6">
+                <div class="img-info">
+                  <a href="./intro.html">
+                    <img src="./assets/images/art12.jpg" class="card-img-top object-fix-cover h-lg-220" height="192px" alt="img_artwork">
+                  </a>
+                  <div class="img-info-background d-none d-lg-block">
+                    <div class="img-info-content">
+                      <div>
+                        <p class="mb-2">靠眼淚發財的女人</p>
+                        <div class="d-flex align-items-center">
+                          <i class="fa-brands fa-ethereum me-2"></i>
+                          <p class="mb-0">300</p>
+                        </div>
+                      </div>
+                      <div class="card-btn align-self-end">
+                        <a href="./intro.html">
+                          <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto fs-5">MORE</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body border-bottom-lg border-lg-night p-2 px-lg-0 py-lg-4">
+                <h3 class="card-text fs-7 fs-lg-6 fw-lg-bold">不哭不哭眼淚是珍珠</h3>
+              </div>
+            </div>
+          </li>
+
+          <li class="col-6 col-lg-3">
+            <div class="card border-0 bg-transparent">
+              <div class="card-img bg-white p-2 p-xl-6">
+                <div class="img-info">
+                  <a href="./intro.html">
+                    <img src="./assets/images/art04.jpg" class="card-img-top object-fix-cover h-lg-395" height="139px" alt="img_artwork">
+                  </a>
+                  <div class="img-info-background d-none d-lg-block">
+                    <div class="img-info-content">
+                      <div>
+                        <p class="mb-2">有啦，很美啦，整條街道你最美</p>
+                        <div class="d-flex align-items-center">
+                          <i class="fa-brands fa-ethereum me-2"></i>
+                          <p class="mb-0">300</p>
+                        </div>
+                      </div>
+                      <div class="card-btn align-self-end">
+                        <a href="./intro.html">
+                          <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto fs-5">MORE</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body border-bottom-lg border-lg-night p-2 px-lg-0 py-lg-4">
+                <h3 class="card-text fs-7 fs-lg-6 fw-lg-bold">我這樣有美嗎</h3>
+              </div>
+            </div>
+          </li>
+
+          <li class="col-6 col-lg-3">
+            <div class="card border-0 bg-transparent">
+              <div class="card-img bg-white p-2 p-xl-6">
+                <div class="img-info">
+                  <a href="./intro.html">
+                    <img src="./assets/images/art03.jpg" class="card-img-top object-fix-cover h-lg-254" height="99px" alt="img_artwork">
+                  </a>
+                  <div class="img-info-background d-none d-lg-block">
+                    <div class="img-info-content">
+                      <div>
+                        <p class="mb-2">其實你還沒出門對吧？</p>
+                        <div class="d-flex align-items-center">
+                          <i class="fa-brands fa-ethereum me-2"></i>
+                          <p class="mb-0">300</p>
+                        </div>
+                      </div>
+                      <div class="card-btn align-self-end">
+                        <a href="./intro.html">
+                          <button type="button" class="btn btn-triangle btn-white btn-xl fs-5 squada ms-auto mt-auto fs-5">MORE</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body border-bottom-lg border-lg-night p-2 px-lg-0 py-lg-4">
+                <h3 class="card-text fs-7 fs-lg-6 fw-lg-bold">十分鐘就到</h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="footer bg-light border-top border-night d-flex align-items-center justify-content-center pt-7 pb-6">
+      <p class="mb-0">© ART NFT. All Rights Reserved</p>
+    </footer>
+
+    <script src="./assets/js/vendors.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>

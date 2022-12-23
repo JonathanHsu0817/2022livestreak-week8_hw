@@ -17,7 +17,7 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-light p-0">
       <div class="container-lg d-flex">
-        <h1 class="flex-grow-1 border-end border-night py-3 py-lg-7 fs-6 m-0"><a class="navbar-brand " href="#">
+        <h1 class="flex-grow-1 border-end border-night py-3 py-lg-8 fs-6 m-0"><a class="navbar-brand " href="./index.html">
           <img src="./assets/images/logo.svg" alt="logo"></a></h1>
         <form class="d-flex align-items-center py-lg-6 px-xl-9">
           <input class="form-control bg-light border-0 d-none d-lg-block" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
@@ -28,20 +28,87 @@
         </button>
         <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
           <ul class="navbar-nav fw-bold mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link px-lg-9 py-6 py-lg-8  text-center active" aria-current="page" href="#">探索</a>
+            <li class="nav-item border-bottom border-night">
+              <a class="nav-link px-lg-9 py-6 py-lg-10  text-center active" aria-current="page" href="./explore.html">探索</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-lg-9 py-6 py-lg-8 text-center active" aria-current="page" href="#">市值</a>
+              <a class="nav-link px-lg-9 py-6 py-lg-10 text-center active" aria-current="page" href="./price.html">市值</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-lg-9 py-lg-8 active d-none d-lg-block" aria-current="page" href="#"><i class="fa-solid fa-wallet fa-xl "></i></a>
-              <a class="nav-link btn btn-primary border border-night text-white fs-5 d-lg-none py-3 mb-6" href="#">連結錢包</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalNavbar"><i class="fa-solid fa-wallet nav-link fs-3 text-black pe-0 py-lg-10 ps-lg-10 d-none d-lg-inline-block"></i></a>
+
+              <a href="#" class="btn border-night text-white fs-5 fs-lg-6 bg-primary rounded-0 w-100 py-3 d-lg-none" data-bs-toggle="modal" data-bs-target="#modalNavbar">連結錢包</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <div class="modal fade" id="modalNavbar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-md-down">
+        <div class="modal-content">
+          <div class="modal-header border-night">
+            <div class="position-relative w-100">
+              <h5 class="modal-title text-center fs-4" id="modalNavbarHeading">連結你的錢包</h5>
+              <div class="position-absolute top-50 end-0 translate-middle-y">
+                <button type="button" class="btn-close d-block" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body px-3 pb-0 px-md-3">
+            <div class="container-fluid">
+              <ul class="modal-list row list-unstyled mb-0">
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect01.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">MetaMask</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect02.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">Coinbase Wallet</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect03.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">WalletConnect</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect04.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">Phantom</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 mb-md-0 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect05.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">Glow</p>
+                  </div>
+                </li>
+
+                <li class="col-md-6 px-0 px-md-1 mb-2 mb-md-0 cursor-pointer">
+                  <div class="link-item d-flex align-items-center border border-night p-4">
+                    <img src="./assets/images/connect06.png" class="me-4" width="16px" height="16px" alt="img_metaMask">
+                    <p class="mb-0">Fortmatic</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer p-0 p-md-6 border-0">
+            <button type="button" class="btn btn-primary fs-5 text-white border-night w-100 w-md-auto py-3 py-md-2 px-md-12 mx-auto m-0">連結錢包</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <main>
     <section class="intro bg-light pt-6 pt-lg-8 pb-8">
@@ -67,7 +134,7 @@
                                     <i class="fa-solid fa-arrow-right me-2"></i>
                                     <p class="squada mb-0">0.044Eth</p>
                                 </div>
-                                <a href="#" class="btn btn-xl bg-primary text-white fs-5  border-night">出價</a>
+                                <a href="./artists.html" class="btn btn-xl bg-primary text-white fs-5  border-night">出價</a>
                             </div>
                         </div>
                         <div class="card-body px-4 py-6 px-lg-8 py-lg-7">
@@ -256,7 +323,7 @@
                     <h2 class="squada fs-2 fs-lg-1 mb-0 me-lg-4">Other</h2>
                     <h3 class="d-none d-lg-inline-block fs-4 fw-bold">其餘作品</h3>
                 </div>
-                <a href="#" class="btn btn-triangle btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
+                <a href="./filter.html" class="btn btn-triangle btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
             </nav>
             <div class="swiper intro-swiper">
                 <div class="swiper-wrapper">
@@ -264,7 +331,7 @@
                         <div class="card border-0 bg-transparent">
                             <div class="card-img bg-white p-2 p-xl-6">
                                 <div class="img-info">
-                                    <a href="#">
+                                    <a href="./filter.html">
                                         <img src="./assets/images/art22.jpg" class="card-img-top object-fix-cover h-lg-327" height="164px" alt="art22">
                                     </a>
                                     <div class="img-info-background d-none d-lg-block">
@@ -277,7 +344,7 @@
                                                 </div>
                                             </div>
                                             <div class="card-btn align-self-end">
-                                                <a href="#" class="btn btn-triangle btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
+                                                <a href="./explore.html" class="btn btn-triangle btn-white btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -294,7 +361,7 @@
                         <div class="card border-0 bg-transparent">
                             <div class="card-img bg-white p-2 p-xl-6">
                                 <div class="img-info">
-                                    <a href="#">
+                                    <a href="./filter.html">
                                         <img src="./assets/images/art27.jpg" class="card-img-top object-fix-cover h-lg-327" height="164px" alt="art27">
                                     </a>
                                     <div class="img-info-background d-none d-lg-block">
@@ -307,7 +374,7 @@
                                                 </div>
                                             </div>    
                                             <div class="card-btn align-self-end">
-                                                <a href="#" class="btn btn-triangle btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
+                                                <a href="./explore.html" class="btn btn-triangle btn-white btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -324,7 +391,7 @@
                         <div class="card border-0 bg-transparent">
                             <div class="card-img bg-white p-2 p-xl-6">
                                 <div class="img-info">
-                                    <a href="#">
+                                    <a href="./filter.html">
                                         <img src="./assets/images/art20.jpg" class="card-img-top object-fix-cover h-lg-327" height="164px" alt="art20">
                                     </a>
                                     <div class="img-info-background d-none d-lg-block">
@@ -337,7 +404,7 @@
                                                 </div>
                                             </div>
                                             <div class="card-btn align-self-end">
-                                                <a href="#" class="btn btn-triangle btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
+                                                <a href="./explore.html" class="btn btn-triangle btn-white btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -354,7 +421,7 @@
                         <div class="card border-0 bg-transparent">
                             <div class="card-img bg-white p-2 p-xl-6">
                                 <div class="img-info">
-                                    <a href="#">
+                                    <a href="./filter.html">
                                         <img src="./assets/images/art22.jpg" class="card-img-top object-fix-cover h-lg-327" height="164px" alt="art22">
                                     </a>
                                     <div class="img-info-background d-none d-lg-block">
@@ -367,7 +434,7 @@
                                                 </div>
                                             </div>
                                             <div class="card-btn align-self-end">
-                                                <a href="#" class="btn btn-triangle btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
+                                                <a href="./explore.html" class="btn btn-triangle btn-white btn-border btn-xl fs-5 squada mb--1 ms-auto">MORE</a>
                                             </div>
                                         </div>
                                     </div>
