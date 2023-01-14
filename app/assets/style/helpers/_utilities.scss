@@ -1,4 +1,5 @@
 // 擴充通用類別
+// 擴充通用類別
 $utilities: map-merge(
   $utilities,
   (
@@ -195,6 +196,8 @@ $utilities: map-merge(
       property: width,
       class: w,
       values: (
+        5: 5%,
+        10: 10%,
         25: 25%,
         50: 50%,
         75: 75%,
@@ -212,13 +215,15 @@ $utilities: map-merge(
         75: 75%,
         100: 100%,
         auto: auto,
-        // 以下為首頁卡片不規則高度
+        // 以下為圖片不規則高度
         164: 164px,
         185: 185px,
         220: 220px,
         254: 254px,
         270: 270px,
         327: 327px,
+        334: 334px,
+        340: 340px,
         368: 368px,
         374: 374px,
         395: 395px,
@@ -230,6 +235,7 @@ $utilities: map-merge(
       class: font,
       values: (
         "Noto-Sans-TC": "Noto Sans TC",
+        "Paytone-One": "Paytone One",
       )
     ),
     "z-index": (
@@ -241,6 +247,13 @@ $utilities: map-merge(
         none: none
       )
     ),
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      values: (
+        pointer: pointer,
+      )
+    )
   )
 );
 
@@ -250,6 +263,12 @@ $utilities: map-merge(
   &:hover {
     color: $primary !important;
     transition: .3s;
+  }
+}
+
+.btn-hover-dark:hover {
+  @media(min-width: 768px) {
+    background: $dark !important;
   }
 }
 //以上參考學習 Cliff Chu utilities擴充

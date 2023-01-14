@@ -254,16 +254,27 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,//4
-  2: $spacer * .5,//8
-  3: $spacer * .75,//12
-  4: $spacer,//16
-  5: $spacer * 1.25,//20
-  6: $spacer * 1.5,//24
-  7: $spacer * 2,//32
-  8: $spacer * 2.5,//40
-  9: $spacer * 3,//48
-  10: $spacer * 5,//60
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * .75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 1.75,
+  8: $spacer * 2,
+  9: $spacer * 2.25,
+  10: $spacer * 2.5,
+  11: $spacer * 2.75,
+  12: $spacer * 3,
+  12-l: $spacer * 3.125,
+  20: $spacer * 5,
+  22: $spacer * 5.5,
+  24: $spacer * 6,
+  26: $spacer * 6.5,
+
+  34: $spacer * 8.5,
+
+  67-l: $spacer * 16.875,
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -470,8 +481,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $font-size-base,
-  7: $font-size-base*0.875 //14
+  6: $h6-font-size,
+  7: $h6-font-size * 0.875, // 14
+  8: $h6-font-size * 0.75, // 12
 ) !default;
 // scss-docs-end font-sizes
 
@@ -604,11 +616,14 @@ $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
 
-$input-btn-focus-width:         .25rem !default;
+// $input-btn-focus-width:         .25rem !default;
+$input-btn-focus-width:         0 !default;
 $input-btn-focus-color-opacity: .25 !default;
-$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
+// $input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
+$input-btn-focus-color:         none !default;
 $input-btn-focus-blur:          0 !default;
-$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
+// $input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
+$input-btn-focus-box-shadow:    none !default;
 
 $input-btn-padding-y-sm:      .25rem !default;
 $input-btn-padding-x-sm:      .5rem !default;
@@ -951,7 +966,7 @@ $nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !
 // $nav-tabs-link-active-color:        $gray-700 !default;
 $nav-tabs-link-active-color:        $black !default;
 // $nav-tabs-link-active-bg:           $body-bg !default;
-$nav-tabs-link-active-bg:           $secondary !default;
+$nav-tabs-link-active-bg:           $light !default;
 // $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 $nav-tabs-link-active-border-color: $black $black $nav-tabs-link-active-bg !default;
 
